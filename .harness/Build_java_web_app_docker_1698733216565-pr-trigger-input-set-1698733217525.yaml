@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_java_web_app_docker_1698733216565-pr-trigger-input-set
+  identifier: Build_java_web_app_docker_1698733216565prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: nginx
+  pipeline:
+    identifier: Build_java_web_app_docker_1698733216565
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
