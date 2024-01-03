@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_B_kaviarasu_java_web_app_docker_1704259531229-pr-trigger-input-set
+  identifier: Build_B_kaviarasu_java_web_app_docker_1704259531229prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: dpxn
+  pipeline:
+    identifier: Build_B_kaviarasu_java_web_app_docker_1704259531229
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
