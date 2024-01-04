@@ -6,9 +6,9 @@ pipeline:
   properties:
     ci:
       codebase:
-        build: <+input>
         connectorRef: account.Github_OAuth_1698733181227
         repoName: B-kaviarasu/java-web-app-docker
+        build: <+input>
   stages:
     - stage:
         identifier: build
@@ -34,5 +34,8 @@ pipeline:
           runtime:
             spec: {}
             type: Cloud
+          caching:
+            enabled: false
+            paths: []
         type: CI
         description: ""
