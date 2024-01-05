@@ -28,12 +28,21 @@ pipeline:
                       tags: latest
                   timeout: ""
                   type: Plugin
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: dockerreg
+                    repo: nginx
+                    tags:
+                      - dockerpush
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
+            type: Docker
             spec: {}
-            type: Cloud
           caching:
             enabled: false
             paths: []
