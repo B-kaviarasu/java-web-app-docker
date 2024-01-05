@@ -21,6 +21,7 @@ pipeline:
                   identifier: dockerbuild
                   name: docker_build
                   spec:
+                    connectorRef: dockerreg
                     image: plugins/docker
                     settings:
                       dry_run: "true"
@@ -29,14 +30,12 @@ pipeline:
                   timeout: ""
                   type: Plugin
               - step:
-                  type: BuildAndPushDockerRegistry
-                  name: BuildAndPushDockerRegistry_1
-                  identifier: BuildAndPushDockerRegistry_1
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
                   spec:
-                    connectorRef: dockerreg
-                    repo: nginx
-                    tags:
-                      - dockerpush
+                    shell: Sh
+                    command: sh'docker build -t ivak/newharness:latest .'
           platform:
             os: Linux
             arch: Amd64
