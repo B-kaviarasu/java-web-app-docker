@@ -29,13 +29,6 @@ pipeline:
                       tags: latest
                   timeout: ""
                   type: Plugin
-              - step:
-                  type: Run
-                  name: Run_1
-                  identifier: Run_1
-                  spec:
-                    shell: Sh
-                    command: sh'docker build -t ivak/newharness:latest .'
           platform:
             os: Linux
             arch: Amd64
